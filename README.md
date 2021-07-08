@@ -41,20 +41,21 @@
 ## 📌 Tecnologias
 
 <p align="justify">
-Abaixo estão algumas das tecnologias utilizadas durante o desenvolvimento do projeto. Ainda foi visado: Organizar o diretório da nossa aplicação de forma concisa, limpa e eficiente. Escrever código limpo visando reutilização e eficiência.
+  Abaixo estão algumas das tecnologias utilizadas durante o desenvolvimento do projeto. Ainda foi visado: Organizar o diretório da nossa aplicação de forma concisa, limpa e eficiente. Escrever código limpo visando reutilização e eficiência.
 </p>
+
 <br>
 <p align="center">
-  <img  src="https://img.shields.io/badge/-Yarn-2C8EBB?&style=for-the-badge&logoColor=fff&logo=yarn&logoWidth=25"/>
-  <img  src="https://img.shields.io/badge/HTML5-CB3837?style=for-the-badge&logo=html5&logoColor=white"/>
-  <img  src="https://img.shields.io/badge/CSS3-239120?style=for-the-badge&logo=css3&logoColor=white"/>
-  <img  src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white" />
-  <img  src="https://img.shields.io/badge/-TypeScript-3178C6?&style=for-the-badge&logoColor=fff&logo=TypeScript&logoWidth=25"/>
-  <img  src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white"/>
-  <img  src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
-  <img  src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
-  <img  src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
-  <img  src="https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black" />
+  <img src="https://img.shields.io/badge/-Yarn-2C8EBB?&style=for-the-badge&logoColor=fff&logo=yarn&logoWidth=25"/>
+  <img src="https://img.shields.io/badge/HTML5-CB3837?style=for-the-badge&logo=html5&logoColor=white"/>
+  <img src="https://img.shields.io/badge/CSS3-239120?style=for-the-badge&logo=css3&logoColor=white"/>
+  <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white" />
+  <img src="https://img.shields.io/badge/-TypeScript-3178C6?&style=for-the-badge&logoColor=fff&logo=TypeScript&logoWidth=25"/>
+  <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+  <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+  <img src="https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black" />
 
 
 </p>
@@ -82,20 +83,20 @@ O layout foi baseado no protótipo idealizado no [Figma](https://www.figma.com/f
 ## ⬇️ Como baixar
 
 ```bash
-    // Clonar repositório
-    $ git clone https://github.com/douglasconstancio/letmeask.git
+  // Clonar repositório
+  $ git clone https://github.com/douglasconstancio/letmeask.git
 
-    // Acessar diretório
-    $ cd letmeask
+  // Acessar diretório
+  $ cd letmeask
 
-    // Instalar dependências
-    $ yarn
+  // Instalar dependências
+  $ yarn
 
-    // Iniciar build
-    $ yarn build
+  // Iniciar build
+  $ yarn build
 
-    // Iniciar projeto
-    $ yarn start
+  // Iniciar projeto
+  $ yarn start
 ```
 ---
 
@@ -116,7 +117,7 @@ O layout foi baseado no protótipo idealizado no [Figma](https://www.figma.com/f
 ## 🚀 Sobre
 
 <p align="justify">
-Este projeto foi idealizado na trilha de ReactJS na edição _Together_ do NLW da Rocketseat. O NLW é um evento online com muito código, desafios, networking e aprendizado.
+  Este projeto foi idealizado na trilha de ReactJS na edição Together do NLW da Rocketseat. O NLW é um evento online com muito código, desafios, networking e aprendizado.
 </p>
 
 ---
