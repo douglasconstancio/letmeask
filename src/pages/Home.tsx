@@ -12,12 +12,12 @@ import { useAuth } from '../hooks/useAuth'
 
 import '../styles/auth.scss'
 
-export function Home() {
+export const Home = () => {
   const history = useHistory();
   const { user, signInWithGoogle } = useAuth()
   const [roomCode, setRoomCode] = useState('')
 
-  async function handleCreateRoom() {
+  const handleCreateRoom = async () =>{
     if (!user) {
       await signInWithGoogle()
     }
@@ -25,7 +25,7 @@ export function Home() {
     history.push('/rooms/new')
   };
 
-  async function handleJoinRoom(event: FormEvent) {
+  const handleJoinRoom = async (event: FormEvent) => {
     event.preventDefault();
 
     if (roomCode.trim() === '') {

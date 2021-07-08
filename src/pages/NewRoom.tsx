@@ -11,12 +11,12 @@ import { useAuth } from '../hooks/useAuth'
 
 import '../styles/auth.scss'
 
-export function NewRoom() {
+export const NewRoom = () => {
   const { user } = useAuth()
   const history = useHistory()
   const [newRoom, setNewRoom] = useState('')
 
-  async function handleCreationRoom(event: FormEvent) {
+  const handleCreationRoom = async (event: FormEvent) => {
     event.preventDefault();
 
     if (newRoom.trim() === '') {

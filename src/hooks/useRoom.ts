@@ -26,7 +26,7 @@ type QuestionType = {
   likeId?: string
 }
 
-export function useRoom(roomId: string) {
+export const useRoom = (roomId: string) => {
   const { user } = useAuth()
   const [questions, setQuestions] = useState<QuestionType[]>([])
   const [title, setTitle] = useState('')

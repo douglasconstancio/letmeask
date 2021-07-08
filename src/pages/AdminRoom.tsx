@@ -11,7 +11,6 @@ import { Question } from '../components/Question'
 
 import { database } from '../services/firebase'
 import { useRoom } from '../hooks/useRoom'
-// import { useAuth } from '../hooks/useAuth'
 
 import '../styles/room.scss'
 
@@ -19,8 +18,7 @@ type RoomParams = {
   id: string
 }
 
-export function AdminRoom() {
-  // const { user } = useAuth()
+export const AdminRoom = () => {
   const history = useHistory()
   const params = useParams<RoomParams>()
 
@@ -28,35 +26,35 @@ export function AdminRoom() {
 
   const { title,questions } = useRoom(roomId)
 
-  async function handleEndRoom() {
+  const handleEndRoom = async () => {
     await database.ref(`rooms/${roomId}`).update({ endedAt: new Date() })
 
     history.push('/')
   }
 
-  async function handleDeleteQuestion(questionId: string) {
+  const handleDeleteQuestion = async (questionId: string) => {
     if(window.confirm('Tem certeza que você deseja excluir esta pergunta?')) {
       await database.ref(`rooms/${roomId}/questions/${questionId}`).remove()
     }
   }
 
-  async function handleCheckQuestionAsAnswered(questionId: string) {
+  const handleCheckQuestionAsAnswered = async (questionId: string) => {
     await database.ref(`rooms/${roomId}/questions/${questionId}`).update({
       isAnswered: true
     })
   }
 
-  async function handleHighlightQuestion(questionId: string) {
+  const handleHighlightQuestion = async (questionId: string) => {
     await database.ref(`rooms/${roomId}/questions/${questionId}`).update({
       isHighlighted: true
     })
   }
 
   return (
-    <div id='page-room'>
+    <div id="page-room">
       <header>
-        <div className='content'>
-          <img src={logoImg} alt='letmeask' />
+        <div className="content">
+          <img src={logoImg} alt="letmeask" />
           <div>
             <RoomCode code={roomId}/>
             <Button isOutlined onClick={handleEndRoom}>Encerrar sala</Button>
@@ -64,7 +62,7 @@ export function AdminRoom() {
         </div>
       </header>
       <main>
-        <div className='room-title'>
+        <div className="room-title">
           <h1>Sala {title}</h1>
           <span>{`${questions.length} pergunta(s)`}</span>
         </div>

@@ -17,7 +17,7 @@ type RoomParams = {
   id: string
 }
 
-export function Room() {
+export const Room = () => {
   const { user } = useAuth()
   const params = useParams<RoomParams>()
   const [newQuestion, setNewQuestion] = useState('')
@@ -26,7 +26,7 @@ export function Room() {
 
   const { title,questions } = useRoom(roomId)
 
-  async function handleSendQuestion(event: FormEvent) {
+  const handleSendQuestion = async (event: FormEvent) => {
     event.preventDefault()
 
     if (newQuestion.trim() === '') {
@@ -52,7 +52,7 @@ export function Room() {
     setNewQuestion('')
   }
 
-  async function handleLikeQuestion(questionId: string, likeId?: string) {
+  const handleLikeQuestion = async (questionId: string, likeId?: string) => {
     if (likeId) {
       await database
         .ref(`rooms/${roomId}/questions/${questionId}/likes/${likeId}`).remove();
