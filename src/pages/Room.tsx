@@ -4,8 +4,8 @@ import { useParams } from "react-router-dom"
 import logoImg from "../assets/images/logo.svg"
 
 import { Button } from "../components/Button"
-import { RoomCode } from "../components/RoomCode"
-import { Question } from "../components/Question"
+import RoomCode from "../components/RoomCode"
+import Question from "../components/Question"
 
 import { useAuth } from "../hooks/useAuth"
 import { database } from "../services/firebase"
@@ -17,7 +17,7 @@ type RoomParams = {
   id: string
 }
 
-export const Room = () => {
+const Room = () => {
   const { user } = useAuth()
   const params = useParams<RoomParams>()
   const [newQuestion, setNewQuestion] = useState('')
@@ -55,7 +55,7 @@ export const Room = () => {
   const handleLikeQuestion = async (questionId: string, likeId?: string) => {
     if (likeId) {
       await database
-        .ref(`rooms/${roomId}/questions/${questionId}/likes/${likeId}`).remove();
+        .ref(`rooms/${roomId}/questions/${questionId}/likes/${likeId}`).remove()
     } else {
       await database.ref(`rooms/${roomId}/questions/${questionId}/likes`).push({
         authorId: user?.id,
@@ -129,3 +129,5 @@ export const Room = () => {
     </div>
   )
 }
+
+export default Room

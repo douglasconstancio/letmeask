@@ -6,7 +6,7 @@ type RoomCodeProps = {
   code: string
 }
 
-export const RoomCode = (props: RoomCodeProps) => {
+const RoomCode = (props: RoomCodeProps) => {
   const copyRoomCodeToClipboard = () =>
     navigator.clipboard.writeText(props.code)
 
@@ -19,3 +19,5 @@ export const RoomCode = (props: RoomCodeProps) => {
     </button>
   )
 }
+
+export default RoomCode

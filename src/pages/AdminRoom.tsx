@@ -6,8 +6,8 @@ import checkImg from '../assets/images/check.svg'
 import answerImg from '../assets/images/answer.svg'
 
 import { Button } from '../components/Button'
-import { RoomCode } from '../components/RoomCode'
-import { Question } from '../components/Question'
+import RoomCode from '../components/RoomCode'
+import Question from '../components/Question'
 
 import { database } from '../services/firebase'
 import { useRoom } from '../hooks/useRoom'
@@ -18,7 +18,7 @@ type RoomParams = {
   id: string
 }
 
-export const AdminRoom = () => {
+const AdminRoom = () => {
   const history = useHistory()
   const params = useParams<RoomParams>()
 
@@ -105,3 +105,5 @@ export const AdminRoom = () => {
     </div>
   )
 }
+
+export default AdminRoom
