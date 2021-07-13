@@ -31,7 +31,7 @@
   Sabendo dessa necessidade, a Rocketseat teve a brilhante ideia de elaborar um projeto que consiste no ranqueamento de perguntas para que as perguntas prioritárias dos aprensetadores das lives sejão as mais ranqueadas ou seja, as dúvidas que são mais frequentes pela comunidade.
 
   <p align="center">
-    <img align="center" src="public/images/main-screen.png">
+    <img align="center" src=".github/main-screen.png">
   </p>
 
 </p>
@@ -75,7 +75,7 @@
 ## 📊 Layout:
 O layout foi baseado no protótipo idealizado no [Figma](https://www.figma.com/file/NCde0NX0EBH0NgVhrc2rvI/Letmeask-(Copy)?node-id=45%3A3279) e conforme imagem abaixo:
 <p align="center">
-  <img align="center" src="public/images/details.png">
+  <img align="center" src=".github/details.png">
 </p>
 
 ---
@@ -102,15 +102,18 @@ O layout foi baseado no protótipo idealizado no [Figma](https://www.figma.com/f
 
 ## 💭 Melhorias
 
-- Torná-lo responsivo
-- Melhorias visuais e de estado de alguns botões
-- PWA (Rodar off) - Utilizar e estudar o Next PWA
-- Dark Theme
-- Utilização da alguma biblioteca de CSS ex: _(styled-component)_
-- Testar outros bancos de dados ex: _(Firestore, Supabase, FaunaDB)_
-- Ao criar sala redirecionar para admin e não para usuario padrão
-- Usar modal ex: (react-modal)
+- ✅ Torná-lo responsivo
+- ✅ Melhorias visuais e de estado de alguns botões
+- ⛔️ PWA (Rodar off) - Utilizar e estudar o Next PWA
+- ✅ Dark Theme
+- ⛔️ Utilização da alguma biblioteca de CSS ex: _(styled-component)_
+- ⛔️ Testar outros bancos de dados ex: _(Firestore, Supabase, FaunaDB)_
+- ✅ Ao criar sala redirecionar para admin e não para usuario padrão
+- ✅ Usar modal ex: (react-modal)
 - Melhorar o carregamento das perguntas
+- ✅ Validar se a sala já não foi encerrada quando enviar pergunta
+- ⛔️ Dono da sala conseguir ver quantidade de likes (talvez as fotinhos...)
+- ⛔️ Dono da sala conseguir ver quantidade de pessoas ativas (talvez as fotinhos...)
 
 ---
 

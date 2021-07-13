@@ -1,23 +1,28 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import Home from './pages/Home'
-import NewRoom from './pages/NewRoom'
-import Room from './pages/Room'
-import AdminRoom from './pages/AdminRoom'
+import { Home } from "./pages/Home";
+import { AdminRoom } from "./pages/AdminRoom";
+import { Room } from "./pages/Room";
 
-import { AuthContextProvider } from './contexts/AuthContext'
+import { AuthContextProvider } from "./contexts/AuthContext";
+import { ThemeContextProvider } from "./contexts/ThemeContext";
 
-const App = () =>
-  <BrowserRouter>
-    <AuthContextProvider>
-      <Switch>
-        <Route path='/' exact component={Home}/>
-        <Route path='/rooms/new' component={NewRoom}/>
-        <Route path='/rooms/:id' component={Room}/>
+import "./styles/global.scss";
 
-        <Route path='/admin/rooms/:id' component={AdminRoom}/>
-      </Switch>
-    </AuthContextProvider>
-  </BrowserRouter>
+function App() {
+  return (
+    <BrowserRouter>
+      <AuthContextProvider>
+        <ThemeContextProvider>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/rooms/:id" component={Room} />
+            <Route path="/admin/rooms/:id" component={AdminRoom} />
+          </Switch>
+        </ThemeContextProvider>
+      </AuthContextProvider>
+    </BrowserRouter>
+  );
+}
 
-export default App
+export default App;

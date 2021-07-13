@@ -1,0 +1,38 @@
+.roomCode {
+  height: 50px;
+  border-radius: 8px;
+  overflow: hidden;
+
+  background: var(--background);
+  border: 1px solid var(--purple);
+
+  display: flex;
+  align-items: center;
+
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: brightness(0.7);
+  }
+
+  div {
+    background: var(--purple);
+    padding: 0 0.75rem;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  span {
+    color: var(--text);
+    display: block;
+    align-self: center;
+    flex: 1;
+    padding: 0.75rem 1rem;
+
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+}

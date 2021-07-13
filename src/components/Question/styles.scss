@@ -1,0 +1,153 @@
+.question {
+  padding: 1.5rem;
+  border-radius: 8px;
+
+  background: var(--background-container);
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.04);
+
+  & + .question {
+    margin-top: 0.5rem;
+  }
+
+  &.highlighted {
+    border: 1px solid var(--purple);
+    background: var(--background-question-highlighted);
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.12);
+
+    footer .user-info span {
+      color: var(--text);
+    }
+  }
+
+  &.answered {
+    background: var(--background-question-answered);
+  }
+
+  p {
+    color: var(--text);
+    font-size: 1rem;
+  }
+
+  footer {
+    display: flex;
+    margin-top: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+
+    .user-info {
+      display: flex;
+      align-items: center;
+
+      img {
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+      }
+
+      span {
+        margin-left: 0.5rem;
+        color: #737380;
+        font-size: 0.875rem;
+      }
+    }
+
+    div:nth-child(2) {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      @media (max-width: 425px) {
+        gap: 0.5rem;
+      }
+
+      @media (max-width: 375px) {
+        gap: 0.25rem;
+      }
+
+      span {
+        align-self: flex-end;
+      }
+    }
+
+    button {
+      display: flex;
+      gap: 0.5rem;
+      border: 0;
+      background: transparent;
+      transition: filter 0.3s;
+
+      &.question-buttons {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        color: var(--gray);
+      }
+
+      &.active {
+        color: #485bff;
+
+        svg path, svg circle {
+          stroke: #485bff;
+        }
+      }
+
+      &:hover {
+        filter: brightness(0.9);
+      }
+
+      & svg path,
+      & circle {
+        transition: stroke 0.3s;
+      }
+
+      &:hover svg path,
+      &:hover circle {
+        stroke: #485bff;
+      }
+
+      &:first-child {
+        & svg path,
+        & circle {
+          transition: stroke 0.3s;
+        }
+
+        &:hover svg path,
+        &:hover circle {
+          stroke: #68d391;
+        }
+
+        &.active {
+          color: #68d391;
+
+          svg path, svg circle {
+            stroke: #68d391;
+          }
+        }
+      }
+    }
+  }
+
+  .remove-button {
+    &:hover {
+      filter: brightness(0.9);
+    }
+
+    & svg path,
+    & circle {
+      transition: stroke 0.3s;
+    }
+
+    &:hover svg path,
+    &:hover circle {
+      stroke: var(--red);
+    }
+
+    &.active {
+      color: var(--red);
+
+      svg path, svg circle {
+        stroke: var(--red);
+      }
+    }
+  }
+}
