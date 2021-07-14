@@ -45,6 +45,10 @@
       margin-top: 1rem;
       color: var(--content);
     }
+
+    @media (max-width: 414px) {
+      display: none;
+    }
   }
 
   main {

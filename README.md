@@ -110,14 +110,18 @@ O layout foi baseado no protótipo idealizado no [Figma](https://www.figma.com/f
 - ⛔️ Testar outros bancos de dados ex: _(Firestore, Supabase, FaunaDB)_
 - ✅ Ao criar sala redirecionar para admin e não para usuario padrão
 - ✅ Usar modal ex: (react-modal)
-- Melhorar o carregamento das perguntas
+- ⛔️ Melhorar o carregamento das perguntas
 - ✅ Validar se a sala já não foi encerrada quando enviar pergunta
 - ⛔️ Dono da sala conseguir ver quantidade de likes (talvez as fotinhos...)
 - ⛔️ Dono da sala conseguir ver quantidade de pessoas ativas (talvez as fotinhos...)
+- ⛔️ Opção de adicionar pergunta anônima
+- ⛔️ Usuário saber quais salas abertas ele possui
 
 ---
 
 ## 🚀 Sobre
+
+Esta disponibilizada nesta [URL](https://letmeask-c792d.web.app/) a primeira versão do projeto.
 
 <p align="justify">
   Este projeto foi idealizado na trilha de ReactJS na edição Together do NLW da Rocketseat. O NLW é um evento online com muito código, desafios, networking e aprendizado.
