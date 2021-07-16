@@ -131,7 +131,7 @@ const Room = () => {
       </header>
       <main>
         <div className={styles.roomTitle}>
-        <div style={{ display: "flex", gap: '10px'}}>
+        <div className={styles.wrapper}>
             <h1>Sala {title}</h1>
             {user
               ? <UserProfile />
@@ -153,7 +153,7 @@ const Room = () => {
             value={newQuestion}
           />
           <div className={styles.formFooter}>
-            <div style={{ display: "flex", gap: '10px'}}>
+            <div className={styles.wrapper}>
             <input
               type="checkbox"
               onChange={handleAnonymousQuestion}
