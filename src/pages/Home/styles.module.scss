@@ -46,6 +46,7 @@
       color: var(--content);
     }
 
+    // Remove purple side when is mobile view
     @media (max-width: 414px) {
       display: none;
     }

@@ -57,7 +57,6 @@
   <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
   <img src="https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black" />
 
-
 </p>
 
 ---
@@ -114,8 +113,9 @@ O layout foi baseado no protótipo idealizado no [Figma](https://www.figma.com/f
 - ✅ Validar se a sala já não foi encerrada quando enviar pergunta
 - ⛔️ Dono da sala conseguir ver quantidade de likes (talvez as fotinhos...)
 - ⛔️ Dono da sala conseguir ver quantidade de pessoas ativas (talvez as fotinhos...)
-- ⛔️ Opção de adicionar pergunta anônima
+- ✅ Opção de adicionar perguntas anônimas
 - ⛔️ Usuário saber quais salas abertas ele possui
+- ⛔️ Separar instâncias do ambiente de **dev** e de **prod**
 
 ---
 

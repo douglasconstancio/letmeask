@@ -1,6 +1,8 @@
 import { ReactNode } from "react";
 import cx from "classnames";
 
+import Anonymous from '../../assets/images/profile.png'
+
 import "./styles.scss";
 
 type QuestionProps = {
@@ -12,6 +14,7 @@ type QuestionProps = {
   children?: ReactNode;
   isAnswered?: boolean;
   isHighlighted?: boolean;
+  isAnonymized?: boolean;
 }
 
 const Question = ({
@@ -20,7 +23,12 @@ const Question = ({
   children,
   isAnswered = false,
   isHighlighted = false,
+  isAnonymized = false,
 }: QuestionProps) => {
+  const { avatar, displayName } = isAnonymized
+    ? { displayName: "Anônimo", avatar: Anonymous }
+    : { displayName: author.name, avatar: author.avatar }
+
   return (
     <div
       className={cx(
@@ -32,8 +40,8 @@ const Question = ({
       <p>{content}</p>
       <footer>
         <div className="user-info">
-          <img src={author.avatar} alt={author.name} />
-          <span>{author.name}</span>
+          <img src={avatar} alt={displayName} />
+          <span>{displayName}</span>
         </div>
         <div>{children}</div>
       </footer>

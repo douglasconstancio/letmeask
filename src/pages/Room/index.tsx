@@ -30,6 +30,7 @@ const Room = () => {
   const { user, signInWithGoogle } = useAuth();
   const { isDark } = useTheme();
   const [newQuestion, setNewQuestion] = useState("");
+  const [isAnonymous, setIsAnonymous] = useState(false);
 
   const roomId = params.id;
   const { questions, title } = useRoom(roomId);
@@ -84,12 +85,13 @@ const Room = () => {
       },
       isHighlighted: false,
       isAnswered: false,
+      isAnonymized: isAnonymous,
     };
 
     await database.ref(`/rooms/${roomId}/questions`).push(question);
 
     setNewQuestion("");
-    toast.success("Pergunta enviada", {
+    toast.success(`Pergunta${isAnonymous ? " anônima" : ""} enviada`, {
       style: {
         background: "#68D391",
         color: "#FFF",
@@ -101,10 +103,7 @@ const Room = () => {
     });
   };
 
-  const handleLikeQuestion = async (
-    questionId: string,
-    likeId: string | undefined
-  ) => {
+  const handleLikeQuestion = async (questionId: string, likeId?: string) => {
     if (likeId) {
       await database
         .ref(`rooms/${roomId}/questions/${questionId}/likes/${likeId}`)
@@ -115,6 +114,8 @@ const Room = () => {
       });
     }
   };
+
+  const handleAnonymousQuestion = () => setIsAnonymous(!isAnonymous)
 
   return (
     <div className={styles.pageRoom}>
@@ -130,7 +131,16 @@ const Room = () => {
       </header>
       <main>
         <div className={styles.roomTitle}>
-          <h1>Sala {title}</h1>
+        <div style={{ display: "flex", gap: '10px'}}>
+            <h1>Sala {title}</h1>
+            {user
+              ? <UserProfile />
+              : (
+                <span>
+                  Para enviar uma pergunta, <button onClick={loginWithGoogle}>faça seu login</button>
+                </span>
+              )}
+          </div>
           <span>
             {questions.length}{" "}
             {questions.length > 1 ? "perguntas" : "pergunta"}
@@ -143,13 +153,13 @@ const Room = () => {
             value={newQuestion}
           />
           <div className={styles.formFooter}>
-            {user ? (
-              <UserProfile />
-            ) : (
-              <span>
-                Para enviar uma pergunta, <button onClick={loginWithGoogle}>faça seu login</button>
-              </span>
-            )}
+            <div style={{ display: "flex", gap: '10px'}}>
+            <input
+              type="checkbox"
+              onChange={handleAnonymousQuestion}
+            />
+            <p>Perguntar em anônimo?</p>
+            </div>
             <Button type="submit" disabled={!user}>
               Enviar Pergunta
             </Button>
@@ -178,6 +188,7 @@ const Room = () => {
                   author={question.author}
                   isAnswered={question.isAnswered}
                   isHighlighted={question.isHighlighted}
+                  isAnonymized={question.isAnonymized}
                 >
                   {!question.isAnswered && (
                     <button

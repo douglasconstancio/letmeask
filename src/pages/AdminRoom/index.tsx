@@ -153,6 +153,7 @@ const AdminRoom = () => {
                   author={question.author}
                   isAnswered={question.isAnswered}
                   isHighlighted={question.isHighlighted}
+                  isAnonymized={question.isAnonymized}
                 >
                   <button
                     type="button"
