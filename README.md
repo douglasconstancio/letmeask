@@ -116,6 +116,8 @@ O layout foi baseado no protótipo idealizado no [Figma](https://www.figma.com/f
 - ⛔️ Usuário saber quais salas abertas ele possui
 - ⛔️ Separar instâncias do ambiente de **dev** e de **prod**
 - ⛔️ Adicionar hint/tooltip em alguns botões e campos
+- ⛔️ Adicionar opção para administrador setar término dos envios de perguntas;
+- ⛔️ Configurar Prettier/ESlint para o projeto;
 
 ---
 

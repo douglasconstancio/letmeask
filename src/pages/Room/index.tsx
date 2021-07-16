@@ -155,11 +155,11 @@ const Room = () => {
           />
           <div className={styles.formFooter}>
             <div className={styles.wrapper}>
-            <input
-              type="checkbox"
-              onChange={handleAnonymousQuestion}
-            />
-            <p>Perguntar em anônimo?</p>
+              <input
+                type="checkbox"
+                onChange={handleAnonymousQuestion}
+              />
+              <p>Perguntar em anônimo?</p>
             </div>
             <Button type="submit" disabled={!user}>
               Enviar Pergunta
