@@ -101,18 +101,18 @@ O layout foi baseado no protótipo idealizado no [Figma](https://www.figma.com/f
 
 ## 💭 Melhorias
 
-- ✅ Torná-lo responsivo
-- ✅ Melhorias visuais e de estado de alguns botões
+- 🟢 Torná-lo responsivo
+- 🟢 Melhorias visuais e de estado de alguns botões
 - ⛔️ PWA (Rodar off) - Utilizar e estudar o Next PWA
-- ✅ Dark Theme
+- 🟢 Dark Theme
 - ⛔️ Testar outros bancos de dados ex: _(Firestore, Supabase, FaunaDB)_
-- ✅ Ao criar sala redirecionar para admin e não para usuario padrão
-- ✅ Usar modal ex: (react-modal)
+- 🟢 Ao criar sala redirecionar para admin e não para usuario padrão
+- 🟢 Usar modal ex: (react-modal)
 - ⛔️ Melhorar o carregamento das perguntas
-- ✅ Validar se a sala já não foi encerrada quando enviar pergunta
-- ✅ Dono da sala conseguir ver quantidade de likes (talvez as fotinhos...)
+- 🟢 Validar se a sala já não foi encerrada quando enviar pergunta
+- 🟢 Dono da sala conseguir ver quantidade de likes (talvez as fotinhos...)
 - ⛔️ Dono da sala conseguir ver quantidade de pessoas ativas (talvez as fotinhos...)
-- ✅ Opção de adicionar perguntas anônimas
+- 🟢 Opção de adicionar perguntas anônimas
 - ⛔️ Usuário saber quais salas abertas ele possui
 - ⛔️ Separar instâncias do ambiente de **dev** e de **prod**
 - ⛔️ Adicionar hint/tooltip em alguns botões e campos

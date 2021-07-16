@@ -131,20 +131,21 @@ const Room = () => {
       </header>
       <main>
         <div className={styles.roomTitle}>
-        <div className={styles.wrapper}>
+          <div className={styles.wrapper}>
             <h1>Sala {title}</h1>
-            {user
-              ? <UserProfile />
-              : (
-                <span>
-                  Para enviar uma pergunta, <button onClick={loginWithGoogle}>faça seu login</button>
-                </span>
-              )}
+            <span>
+              {questions.length}{" "}
+              {questions.length > 1 ? "perguntas" : "pergunta"}
+            </span>
           </div>
-          <span>
-            {questions.length}{" "}
-            {questions.length > 1 ? "perguntas" : "pergunta"}
-          </span>
+          {user
+            ? <UserProfile />
+            : (
+              <span>
+                Para enviar uma pergunta, <button onClick={loginWithGoogle}>faça seu login</button>
+              </span>
+            )
+          }
         </div>
         <form onSubmit={handleSendQuesiton}>
           <textarea
