@@ -14,9 +14,11 @@ import { database } from "../../services/firebase";
 import logoImg from "../../assets/images/logo.svg";
 import logoDarkImg from "../../assets/images/logo-dark.svg";
 import perguntasImg from "../../assets/images/perguntas.svg";
+import likeImg from "../../assets/images/like.svg";
 
 import styles from "./styles.module.scss";
 import toast, {Toaster} from "react-hot-toast";
+import useAuth from "../../hooks/useAuth";
 
 type RoomParams = {
   id: string;
@@ -26,6 +28,7 @@ const AdminRoom = () => {
   const params = useParams<RoomParams>();
   const history = useHistory();
   const roomId = params.id;
+  const { user } = useAuth();
 
   const { questions, title } = useRoom(roomId);
   const { isDark } = useTheme();
@@ -155,6 +158,19 @@ const AdminRoom = () => {
                   isHighlighted={question.isHighlighted}
                   isAnonymized={question.isAnonymized}
                 >
+                  {!question.isAnswered && (
+                    <button
+                      type="button"
+                      disabled={!user}
+                      className={styles.standard}
+                      aria-label="Curtidas"
+                    >
+                      {question.likeCount > 0 && (
+                        <span>{question.likeCount}</span>
+                      )}
+                      <img src={likeImg} alt="Curtidas" />
+                    </button>
+                  )}
                   <button
                     type="button"
                     className={cx("question-buttons", {

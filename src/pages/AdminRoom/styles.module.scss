@@ -65,6 +65,11 @@
     }
   }
 
+  .standard {
+    color: var(--text);
+    cursor: not-allowed
+  }
+
   main {
     max-width: 800px;
     margin: 0 auto;
