@@ -31,7 +31,7 @@
   Sabendo dessa necessidade, a Rocketseat teve a brilhante ideia de elaborar um projeto que consiste no ranqueamento de perguntas para que as perguntas prioritárias dos aprensetadores das lives sejão as mais ranqueadas ou seja, as dúvidas que são mais frequentes pela comunidade.
 
   <p align="center">
-    <img align="center" src=".github/main-screen.png">
+    <img align="center" src=".github/main-screen.gif">
   </p>
 
 </p>
@@ -72,7 +72,7 @@
 ---
 
 ## 📊 Layout:
-O layout foi baseado no protótipo idealizado no [Figma](https://www.figma.com/file/NCde0NX0EBH0NgVhrc2rvI/Letmeask-(Copy)?node-id=45%3A3279) e conforme imagem abaixo:
+O layout foi baseado no protótipo idealizado no [Figma](https://www.figma.com/file/NCde0NX0EBH0NgVhrc2rvI/Letmeask-(Agora-vai)?node-id=0%3A1) e conforme imagem abaixo:
 <p align="center">
   <img align="center" src=".github/details.png">
 </p>
@@ -110,14 +110,15 @@ O layout foi baseado no protótipo idealizado no [Figma](https://www.figma.com/f
 - 🟢 Usar modal ex: (react-modal)
 - ⛔️ Melhorar o carregamento das perguntas
 - 🟢 Validar se a sala já não foi encerrada quando enviar pergunta
-- 🟢 Dono da sala conseguir ver quantidade de likes (talvez as fotinhos...)
-- ⛔️ Dono da sala conseguir ver quantidade de pessoas ativas (talvez as fotinhos...)
+- 🟢 Dono da sala conseguir ver quantidade de likes
+- ⛔️ Dono da sala conseguir ver quantidade de pessoas ativas (talvez as fotinhos...) ⭐
 - 🟢 Opção de adicionar perguntas anônimas
-- ⛔️ Usuário saber quais salas abertas ele possui
+- ⛔️ Usuário saber quais salas abertas ele possui ⭐
 - ⛔️ Separar instâncias do ambiente de **dev** e de **prod**
-- ⛔️ Adicionar hint/tooltip em alguns botões e campos
+- ⛔️ Adicionar hint/tooltip em alguns botões e campos ⭐
 - ⛔️ Adicionar opção para administrador setar término dos envios de perguntas;
 - ⛔️ Configurar Prettier/ESlint para o projeto;
+- ⛔️ Adicionar testes E2E (`cypress`, `cucumber`...);
 
 ---
 
