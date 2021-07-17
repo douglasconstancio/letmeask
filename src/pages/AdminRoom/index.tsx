@@ -113,7 +113,7 @@ const AdminRoom = () => {
           <Toaster />
           <img
             src={isDark ? logoDarkImg : logoImg}
-            alt="Letmeask"
+            alt="QuestionMe"
             onClick={moveToHome}
           />
           <div className={styles.buttons}>

@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-  <img align="center" alt="letmeask" src="src/assets/images/logo.svg" width="420px" />
+  <img align="center" alt="questionme" src="src/assets/images/logo.svg" width="420px" />
 </p>
 
 <br/>

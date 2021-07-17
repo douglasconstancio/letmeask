@@ -122,7 +122,7 @@ const Room = () => {
       <header>
         <div className={styles.content}>
           <Toaster />
-          <img src={isDark ? logoDarkImg : logoImg} alt="Letmeask" onClick={moveToHome} />
+          <img src={isDark ? logoDarkImg : logoImg} alt="QuestionMe" onClick={moveToHome} />
           <div>
             <RoomCode code={roomId} />
             <ButtonToggleTheme />

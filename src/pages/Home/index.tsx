@@ -124,7 +124,7 @@ const Home = () => {
       <main>
         {!user ? (
           <div className={styles.newUser}>
-            <img src={isDark ? logoDarkImg : logoImg} alt="Letmeask" />
+            <img src={isDark ? logoDarkImg : logoImg} alt="QuestionMe" />
             <button
               onClick={signInWithGoogle}
             >
@@ -134,7 +134,7 @@ const Home = () => {
           </div>
         ) : (
           <div className={styles.loggedUser}>
-            <img src={isDark ? logoDarkImg : logoImg} alt="Letmeask" />
+            <img src={isDark ? logoDarkImg : logoImg} alt="QuestionMe" />
             <div className={styles.sliderButton}>
               <button
                 onClick={setCreateRoom}
