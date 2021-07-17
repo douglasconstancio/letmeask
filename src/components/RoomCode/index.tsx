@@ -5,13 +5,24 @@ import styles from './styles.module.scss';
 
 type RoomCodeProps = {
   code: string;
+  isDark: boolean;
 }
 
-const RoomCode = (props: RoomCodeProps) => {
+const RoomCode = ({ code, isDark }: RoomCodeProps) => {
   const copyRoomCodeToClipboard = () => {
-    navigator.clipboard.writeText(props.code)
+    navigator.clipboard.writeText(code)
 
-    toast('Código copiado');
+    toast.success("Código copiado ", {
+      style: {
+        background: isDark ? "#aa1bec" : "#E559F9",
+        color: "#FFF"
+      },
+      iconTheme: {
+        primary: isDark ? "#aa1bec" : "#E559F9",
+        secondary: "#FFF"
+      },
+      icon: "✍🏼"
+    });
   }
 
   return (
@@ -19,7 +30,7 @@ const RoomCode = (props: RoomCodeProps) => {
       <div>
         <img src={copyImg} alt="Copy room code" />
       </div>
-      <span>Sala #{props.code}</span>
+      <span>Sala #{code}</span>
     </button>
   )
 }

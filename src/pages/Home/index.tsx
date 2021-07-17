@@ -31,6 +31,18 @@ const Home = () => {
     event.preventDefault();
 
     if (roomCode.trim() === "") {
+      toast.success("Insira o código da sala ", {
+        style: {
+          background: isDark ? "#8a0e24" : "#E73F5D",
+          color: "#FFF"
+        },
+        iconTheme: {
+          primary: isDark ? "#8a0e24" : "#E73F5D",
+          secondary: "#FFF"
+        },
+        icon: "✍🏼"
+      });
+
       return;
     }
 

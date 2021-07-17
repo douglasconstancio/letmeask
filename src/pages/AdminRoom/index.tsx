@@ -118,7 +118,7 @@ const AdminRoom = () => {
           />
           <div className={styles.buttons}>
             <div>
-              <RoomCode code={roomId} />
+              <RoomCode code={roomId} isDark={isDark}/>
               <ModalDeleteRoom roomId={roomId} />
             </div>
             <ButtonToggleTheme />

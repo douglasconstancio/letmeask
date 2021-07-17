@@ -124,7 +124,7 @@ const Room = () => {
           <Toaster />
           <img src={isDark ? logoDarkImg : logoImg} alt="QuestionMe" onClick={moveToHome} />
           <div>
-            <RoomCode code={roomId} />
+            <RoomCode code={roomId} isDark={isDark}/>
             <ButtonToggleTheme />
           </div>
         </div>
