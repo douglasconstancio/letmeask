@@ -19,7 +19,7 @@
   <a href="#-apresentação-visual">Apresentação visual</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-como-baixar">Como baixar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-sobre"> Sobre </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-melhorias">Melhorias</a>
+  <a href="#-backlog">Backlog</a>
 
 ---
 
@@ -99,7 +99,7 @@ O layout foi baseado no protótipo idealizado no [Figma](https://www.figma.com/f
 ```
 ---
 
-## 💭 Melhorias
+## 💭 Backlog
 
 - 🟢 Torná-lo responsivo
 - 🟢 Melhorias visuais e de estado de alguns botões
@@ -115,10 +115,13 @@ O layout foi baseado no protótipo idealizado no [Figma](https://www.figma.com/f
 - 🟢 Opção de adicionar perguntas anônimas
 - ⛔️ Usuário saber quais salas abertas ele possui ⭐
 - ⛔️ Separar instâncias do ambiente de **dev** e de **prod**
-- ⛔️ Adicionar hint/tooltip em alguns botões e campos ⭐
+- 🟢 Adicionar hint/tooltip em alguns botões e campos
 - ⛔️ Adicionar opção para administrador setar término dos envios de perguntas;
 - ⛔️ Configurar Prettier/ESlint para o projeto;
 - ⛔️ Adicionar testes E2E (`cypress`, `cucumber`...);
+- ⛔️ Adicionar opção do usuário remover pergunta (quando não estiver em destaque ou respondida);
+- ⛔️ Perguntar se realmente quer sair da sala antes de redirecionar ao clicar no link do _Header_
+- ⛔️ Adicionar licença ao repositório
 
 ---
 

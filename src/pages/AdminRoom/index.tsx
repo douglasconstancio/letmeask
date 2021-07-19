@@ -1,5 +1,6 @@
 import cx from "classnames";
 import { useHistory, useParams } from "react-router-dom";
+import { Tooltip } from "@material-ui/core";
 
 import { RoomCode } from "../../components/RoomCode";
 import { Question } from "../../components/Question";
@@ -159,64 +160,30 @@ const AdminRoom = () => {
                   isAnonymized={question.isAnonymized}
                 >
                   {!question.isAnswered && (
-                    <button
-                      type="button"
-                      disabled={!user}
-                      className={styles.standard}
-                      aria-label="Curtidas"
-                    >
-                      {question.likeCount > 0 && (
-                        <span>{question.likeCount}</span>
-                      )}
-                      <img src={likeImg} alt="Curtidas" />
-                    </button>
+                    <Tooltip title="Curtidas">
+                      <button
+                        type="button"
+                        disabled={!user}
+                        className={styles.standard}
+                        aria-label="Curtidas"
+                      >
+                        {question.likeCount > 0 && (
+                          <span>{question.likeCount}</span>
+                        )}
+                        <img src={likeImg} alt="Curtidas" />
+                      </button>
+                    </Tooltip>
                   )}
-                  <button
-                    type="button"
-                    className={cx("question-buttons", {
-                      active: question.isAnswered,
-                    })}
-                    onClick={() =>
-                      handleCheckQuestionAsAnswered(
-                        question.id,
-                        question.isAnswered
-                      )
-                    }
-                  >
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle
-                        cx="12.0003"
-                        cy="11.9998"
-                        r="9.00375"
-                        stroke="#737380"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        d="M8.44287 12.3391L10.6108 14.507L10.5968 14.493L15.4878 9.60193"
-                        stroke="#737380"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </button>
-
-                  {!question.isAnswered && (
+                  <Tooltip title="Responder">
                     <button
                       type="button"
-                      className={question.isHighlighted ? "active" : ""}
+                      className={cx("question-buttons", {
+                        active: question.isAnswered,
+                      })}
                       onClick={() =>
-                        handleHighlightQuestion(
+                        handleCheckQuestionAsAnswered(
                           question.id,
-                          question.isHighlighted
+                          question.isAnswered
                         )
                       }
                     >
@@ -227,10 +194,17 @@ const AdminRoom = () => {
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                       >
+                        <circle
+                          cx="12.0003"
+                          cy="11.9998"
+                          r="9.00375"
+                          stroke="#737380"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
                         <path
-                          fillRule="evenodd"
-                          clipRule="evenodd"
-                          d="M12 17.9999H18C19.657 17.9999 21 16.6569 21 14.9999V6.99988C21 5.34288 19.657 3.99988 18 3.99988H6C4.343 3.99988 3 5.34288 3 6.99988V14.9999C3 16.6569 4.343 17.9999 6 17.9999H7.5V20.9999L12 17.9999Z"
+                          d="M8.44287 12.3391L10.6108 14.507L10.5968 14.493L15.4878 9.60193"
                           stroke="#737380"
                           strokeWidth="1.5"
                           strokeLinecap="round"
@@ -238,6 +212,39 @@ const AdminRoom = () => {
                         />
                       </svg>
                     </button>
+                  </Tooltip>
+
+                  {!question.isAnswered && (
+                    <Tooltip title="Dar destaque">
+                      <button
+                        type="button"
+                        className={question.isHighlighted ? "active" : ""}
+                        onClick={() =>
+                          handleHighlightQuestion(
+                            question.id,
+                            question.isHighlighted
+                          )
+                        }
+                      >
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            clipRule="evenodd"
+                            d="M12 17.9999H18C19.657 17.9999 21 16.6569 21 14.9999V6.99988C21 5.34288 19.657 3.99988 18 3.99988H6C4.343 3.99988 3 5.34288 3 6.99988V14.9999C3 16.6569 4.343 17.9999 6 17.9999H7.5V20.9999L12 17.9999Z"
+                            stroke="#737380"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    </Tooltip>
                   )}
                   <ModalRemoveQuestion
                     questionId={question.id}

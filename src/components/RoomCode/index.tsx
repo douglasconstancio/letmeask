@@ -1,3 +1,4 @@
+import { Tooltip } from '@material-ui/core';
 import toast from 'react-hot-toast';
 import copyImg from '../../assets/images/copy.svg';
 
@@ -26,12 +27,14 @@ const RoomCode = ({ code, isDark }: RoomCodeProps) => {
   }
 
   return (
-    <button onClick={copyRoomCodeToClipboard} className={styles.roomCode}>
-      <div>
-        <img src={copyImg} alt="Copy room code" />
-      </div>
-      <span>Sala #{code}</span>
-    </button>
+    <Tooltip title="Copiar">
+      <button onClick={copyRoomCodeToClipboard} className={styles.roomCode}>
+        <div>
+          <img src={copyImg} alt="Copy room code" />
+        </div>
+        <span>Sala #{code}</span>
+      </button>
+    </Tooltip>
   )
 }
 
