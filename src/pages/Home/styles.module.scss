@@ -13,7 +13,7 @@
     align-items: center;
 
     @media (max-width: 425px) {
-      background: #423f1033;
+      background: var(--background);
       border-radius: 30px;
     }
   }

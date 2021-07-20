@@ -1,6 +1,7 @@
 .userProfile {
   display: flex;
   align-items: center;
+  background: var(--background);
 
   img {
     height: 32px;
@@ -23,7 +24,7 @@
     border: 0;
     border-radius: 50px;
 
-    background: transparent;
+    background: var(--background);
     color: var(--pink);
   }
 }
