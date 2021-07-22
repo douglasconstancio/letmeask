@@ -7,6 +7,7 @@ type FirebaseQuestions = Record<string, {
   author: {
     name: string;
     avatar: string;
+    id: string;
   }
   content: string;
   isAnswered: boolean;
@@ -22,6 +23,7 @@ type QuestionType = {
   author: {
     name: string;
     avatar: string;
+    id: string;
   }
   content: string;
   isAnswered: boolean;

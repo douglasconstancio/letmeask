@@ -119,7 +119,7 @@ O layout foi baseado no protótipo idealizado no [Figma](https://www.figma.com/f
 - ⛔️ Adicionar opção para administrador setar término dos envios de perguntas;
 - ⛔️ Configurar Prettier/ESlint para o projeto;
 - ⛔️ Adicionar testes E2E (`cypress`, `cucumber`...);
-- ⛔️ Adicionar opção do usuário remover pergunta (quando não estiver em destaque ou respondida);
+- 🟢 Adicionar opção do usuário remover própria pergunta (quando não estiver em destaque ou respondida);
 - ⛔️ Perguntar se realmente quer sair da sala antes de redirecionar ao clicar no link do _Header_
 - ⛔️ Adicionar licença ao repositório
 

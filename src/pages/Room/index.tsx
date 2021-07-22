@@ -20,6 +20,7 @@ import logoDarkImg from "../../assets/images/logo-dark.svg";
 import perguntasImg from "../../assets/images/perguntas.svg";
 
 import styles from "./styles.module.scss";
+import { ModalRemoveQuestion } from "../../components/ModalRemoveQuestion";
 
 type RoomParams = {
   id: string;
@@ -83,6 +84,7 @@ const Room = () => {
       author: {
         name: user.name,
         avatar: user.avatar,
+        id: user.id,
       },
       isHighlighted: false,
       isAnswered: false,
@@ -230,6 +232,13 @@ const Room = () => {
                       </button>
                     </Tooltip>
                   )}
+                   {!question.isAnswered && !question.isHighlighted
+                    && question.author.id === user?.id && (
+                      <ModalRemoveQuestion
+                        questionId={question.id}
+                        roomId={roomId}
+                      />
+                    )}
                 </Question>
               );
             })}
