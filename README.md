@@ -34,6 +34,10 @@
     <img align="center" src=".github/main-screen.gif">
   </p>
 
+  <p align="center">
+    <img align="center" src=".github/mobile-main-screen.gif">
+  </p>
+
 </p>
 
 ---
